@@ -7,7 +7,7 @@
 <div align="center">
 
 <!-- 1. CUSTOM MATRIX/GLITCH BANNER (self-contained SVG, no GitHub Action needed) -->
-<img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/assets/hacker-intro.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/yashraj-ghemud/yashraj-ghemud/main/assets/hacker-intro.svg" width="100%"/>
 
 <!-- 2. TYPING ANIMATION (cinematic subtitle) -->
 <a href="https://git.io/typing-svg">
@@ -20,7 +20,7 @@
 
 <!-- 3. TERMINAL BOOT SEQUENCE (custom SVG — boot lines + impact/explosion effect) -->
 <div align="center">
-<img src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_USERNAME/main/assets/terminal-boot.svg" width="100%"/>
+<img src="https://raw.githubusercontent.com/yashraj-ghemud/yashraj-ghemud/main/assets/terminal-boot.svg" width="100%"/>
 </div>
 
 <br/>
@@ -53,20 +53,20 @@
 <!-- 5. GITHUB STATS (dark hacker theme) -->
 <div align="center">
 
-<img height="180em" src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=chartreuse-dark&hide_border=true&include_all_commits=true&count_private=true"/>
-<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=chartreuse-dark&hide_border=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=yashraj-ghemud&show_icons=true&theme=chartreuse-dark&hide_border=true&include_all_commits=true&count_private=true"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=yashraj-ghemud&layout=compact&theme=chartreuse-dark&hide_border=true"/>
 
 </div>
 
 <div align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=highcontrast&hide_border=true" />
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=yashraj-ghemud&theme=highcontrast&hide_border=true" />
 </div>
 
 <br/>
 
 <!-- 6. ACTIVITY GRAPH — no GitHub Action needed, pure URL embed, always works -->
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&theme=react-dark&hide_border=true&area=true" width="95%"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=yashraj-ghemud&theme=react-dark&hide_border=true&area=true" width="95%"/>
 </div>
 
 <br/>
