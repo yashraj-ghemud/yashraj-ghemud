@@ -1,1 +1,45 @@
+<svg width="900" height="220" viewBox="0 0 900 220" xmlns="http://www.w3.org/2000/svg">
+  <rect width="900" height="220" fill="#000000"/>
 
+  <!-- MATRIX RAIN COLUMNS -->
+  <g font-family="monospace" font-size="15" fill="#00ff41">
+    <text x="15" y="0" opacity="0.55">ﾊﾐﾋｰｳｼﾅﾓﾆｻﾜﾂｵ<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.1s" begin="-0.4s" repeatCount="indefinite"/></text>
+    <text x="55" y="0" opacity="0.4">01ﾘﾂ0ﾅﾏ1ﾑﾉ10ﾜ</text>
+    <text x="95" y="0" opacity="0.6">ﾜﾂ0ｵﾘ1ｸﾔ0ﾏﾅ11<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="2.6s" begin="-1.2s" repeatCount="indefinite"/></text>
+    <text x="135" y="0" opacity="0.35">10ﾐﾋ0ｰｳ1ｼﾅ0ﾓ<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.8s" begin="-0.7s" repeatCount="indefinite"/></text>
+    <text x="175" y="0" opacity="0.5">ﾆｻ0ﾜﾂ1ｵﾘ0ｸﾔ1<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="2.9s" begin="-2.1s" repeatCount="indefinite"/></text>
+    <text x="215" y="0" opacity="0.45">0ﾏﾅ1ﾆｻ0ﾜﾂ1ｵ<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.4s" begin="-1.6s" repeatCount="indefinite"/></text>
+    <text x="255" y="0" opacity="0.55">1ﾘ0ｸﾔ1ﾏﾅ0ﾆｻ<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="2.4s" begin="-0.9s" repeatCount="indefinite"/></text>
+    <text x="700" y="0" opacity="0.5">ﾊﾐ0ﾋｰ1ｳｼ0ﾅﾓ<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.0s" begin="-1.4s" repeatCount="indefinite"/></text>
+    <text x="740" y="0" opacity="0.4">0ﾆｻ1ﾜﾂ0ｵﾘ1<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="2.7s" begin="-0.3s" repeatCount="indefinite"/></text>
+    <text x="780" y="0" opacity="0.6">1ｸﾔ0ﾏﾅ1ﾆｻ0<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.5s" begin="-2.3s" repeatCount="indefinite"/></text>
+    <text x="820" y="0" opacity="0.45">0ﾜﾂ1ｵﾘ0ｸﾔ1<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="2.5s" begin="-1.0s" repeatCount="indefinite"/></text>
+    <text x="860" y="0" opacity="0.5">1ﾏﾅ0ﾆｻ1ﾜﾂ0<animateTransform attributeName="transform" type="translate" from="0,-220" to="0,440" dur="3.2s" begin="-1.8s" repeatCount="indefinite"/></text>
+  </g>
+
+  <!-- GLITCH TITLE : chromatic aberration effect -->
+  <text x="452" y="112" text-anchor="middle" font-family="'Courier New', monospace" font-size="46" font-weight="bold" fill="#ff003c" opacity="0.75">
+    VICZO.EXE
+    <animate attributeName="x" values="450;454;450;449;450" dur="0.25s" repeatCount="indefinite"/>
+  </text>
+  <text x="448" y="108" text-anchor="middle" font-family="'Courier New', monospace" font-size="46" font-weight="bold" fill="#00fff9" opacity="0.75">
+    VICZO.EXE
+    <animate attributeName="x" values="446;450;446;447;446" dur="0.25s" repeatCount="indefinite"/>
+  </text>
+  <text x="450" y="110" text-anchor="middle" font-family="'Courier New', monospace" font-size="46" font-weight="bold" fill="#ffffff">VICZO.EXE</text>
+
+  <!-- SUBTITLE : blinking terminal status -->
+  <text x="450" y="150" text-anchor="middle" font-family="monospace" font-size="16" fill="#00ff41">
+    <animate attributeName="opacity" values="0;1;1;0" dur="2s" repeatCount="indefinite"/>
+    &gt; SYSTEM_ONLINE // AI_CORE_ACTIVE // KOTLIN_LOADED
+  </text>
+
+  <!-- scanline overlay -->
+  <rect width="900" height="220" fill="url(#scan)" opacity="0.15"/>
+  <defs>
+    <pattern id="scan" width="4" height="4" patternUnits="userSpaceOnUse">
+      <rect width="4" height="2" fill="#000000"/>
+      <rect y="2" width="4" height="2" fill="#003b0f"/>
+    </pattern>
+  </defs>
+</svg>
