@@ -1,18 +1,16 @@
 # 🐍 Snake Contribution Graph - GitHub Actions Workflow
-# This workflow generates the snake animation on your contribution graph
+# FIXED: Removed GIF outputs that caused "Cannot find module 'canvas'" error
+# The svg-only action does NOT support GIF generation
 # Place this file at: .github/workflows/snake.yml
 
 name: Generate Snake
 
 on:
-  # Run every day at midnight UTC
   schedule:
     - cron: "0 0 * * *"
   
-  # Allow manual trigger
   workflow_dispatch:
   
-  # Run on push to main (for initial setup)
   push:
     branches:
       - main
@@ -24,7 +22,7 @@ jobs:
     timeout-minutes: 10
 
     steps:
-      # Generate the snake SVGs
+      # Generate ONLY SVG outputs (no GIF - canvas module not available)
       - name: Generate Snake Game from GitHub Contribution Graph 🐍
         uses: Platane/snk/svg-only@v3
         with:
@@ -32,14 +30,10 @@ jobs:
           outputs: |
             dist/github-snake.svg
             dist/github-snake-dark.svg?palette=github-dark
-            dist/github-snake.gif?palette=github-dark&color-snake=00f0ff
-            dist/github-snake-dark.gif?palette=github-dark&color-snake=ff0080
 
-      # Show the status of the build
       - name: Show Build Status 📊
         run: |
-          echo "🐍 Snake animation generated successfully!"
-          echo "📁 Files created in dist/ directory"
+          echo "🐍 Snake SVG generated successfully!"
           ls -la dist/
 
       # Push the generated files to the output branch
