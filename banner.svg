@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" width="900" height="300">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0a0a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a0a0a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f0ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0080ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="neonPurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#bf00ff;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#ff0080;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bf00ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="matrix">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" result="noise"/>
+      <feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
+      <feBlend in="SourceGraphic" in2="grayNoise" mode="overlay" result="blend"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="300" fill="url(#bgGrad)"/>
+  
+  <!-- Matrix Rain Effect -->
+  <g opacity="0.15" fill="#00ff41" font-family="monospace" font-size="10">
+    <text x="20" y="30">01101</text><text x="70" y="60">10010</text><text x="120" y="20">11001</text>
+    <text x="170" y="80">01010</text><text x="220" y="40">10110</text><text x="270" y="90">01101</text>
+    <text x="320" y="30">10010</text><text x="370" y="70">11001</text><text x="420" y="50">01010</text>
+    <text x="470" y="85">10110</text><text x="520" y="25">01101</text><text x="570" y="65">10010</text>
+    <text x="620" y="45">11001</text><text x="670" y="75">01010</text><text x="720" y="35">10110</text>
+    <text x="770" y="55">01101</text><text x="820" y="85">10010</text><text x="860" y="40">11001</text>
+    <text x="30" y="130">11010</text><text x="80" y="160">00111</text><text x="130" y="140">10101</text>
+    <text x="180" y="180">01110</text><text x="230" y="120">11010</text><text x="280" y="170">00111</text>
+    <text x="330" y="150">10101</text><text x="380" y="190">01110</text><text x="430" y="130">11010</text>
+    <text x="480" y="160">00111</text><text x="530" y="200">10101</text><text x="580" y="140">01110</text>
+    <text x="630" y="180">11010</text><text x="680" y="120">00111</text><text x="730" y="160">10101</text>
+    <text x="780" y="200">01110</text><text x="830" y="150">11010</text>
+    <text x="40" y="230">01001</text><text x="90" y="260">10110</text><text x="140" y="240">01101</text>
+    <text x="190" y="280">10010</text><text x="240" y="220">11001</text><text x="290" y="270">01010</text>
+    <text x="340" y="250">10110</text><text x="390" y="290">01101</text><text x="440" y="230">10010</text>
+    <text x="490" y="260">11001</text><text x="540" y="210">01010</text><text x="590" y="250">10110</text>
+    <text x="640" y="290">01101</text><text x="690" y="230">10010</text><text x="740" y="270">11001</text>
+    <text x="790" y="250">01010</text><text x="840" y="290">10110</text>
+    <animate attributeName="opacity" values="0.1;0.2;0.1" dur="3s" repeatCount="indefinite"/>
+  </g>
+
+  <!-- Scanline Effect -->
+  <rect width="900" height="2" fill="#00f0ff" opacity="0.1">
+    <animate attributeName="y" values="0;300;0" dur="4s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Glitch Lines -->
+  <g stroke="#00f0ff" stroke-width="1" opacity="0.3">
+    <line x1="0" y1="50" x2="900" y2="50" stroke-dasharray="5,15">
+      <animate attributeName="stroke-dashoffset" values="0;20" dur="1s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="250" x2="900" y2="250" stroke-dasharray="5,15">
+      <animate attributeName="stroke-dashoffset" values="20;0" dur="1s" repeatCount="indefinite"/>
+    </line>
+  </g>
+
+  <!-- Hexagon Grid Background -->
+  <g stroke="#00f0ff" fill="none" stroke-width="0.5" opacity="0.1">
+    <polygon points="50,100 70,90 90,100 90,120 70,130 50,120"/>
+    <polygon points="90,100 110,90 130,100 130,120 110,130 90,120"/>
+    <polygon points="130,100 150,90 170,100 170,120 150,130 130,120"/>
+    <polygon points="730,100 750,90 770,100 770,120 750,130 730,120"/>
+    <polygon points="770,100 790,90 810,100 810,120 790,130 770,120"/>
+    <polygon points="810,100 830,90 850,100 850,120 830,130 810,120"/>
+  </g>
+
+  <!-- Main Title -->
+  <g filter="url(#glowStrong)">
+    <text x="450" y="110" text-anchor="middle" font-family="'Courier New', monospace" font-size="48" font-weight="bold" fill="url(#neonBlue)">
+      &gt; HACKER_DEVELOPER
+      <animate attributeName="opacity" values="1;0.8;1" dur="2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Subtitle with typing effect -->
+  <g filter="url(#glow)">
+    <text x="450" y="155" text-anchor="middle" font-family="'Courier New', monospace" font-size="18" fill="#00f0ff">
+      [ SYSTEM INITIALIZED... WELCOME TO MY WORLD ]
+      <animate attributeName="opacity" values="0;1;1;0" dur="4s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Fighting Energy Lines -->
+  <g stroke="url(#neonPurple)" stroke-width="2" fill="none" filter="url(#glow)">
+    <path d="M 100,200 Q 200,150 300,200 Q 400,250 450,180">
+      <animate attributeName="d" values="M 100,200 Q 200,150 300,200 Q 400,250 450,180;M 100,200 Q 200,250 300,200 Q 400,150 450,180;M 100,200 Q 200,150 300,200 Q 400,250 450,180" dur="2s" repeatCount="indefinite"/>
+    </path>
+    <path d="M 450,180 Q 500,250 600,200 Q 700,150 800,200">
+      <animate attributeName="d" values="M 450,180 Q 500,250 600,200 Q 700,150 800,200;M 450,180 Q 500,150 600,200 Q 700,250 800,200;M 450,180 Q 500,250 600,200 Q 700,150 800,200" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Explosion Particles -->
+  <g fill="#ff0080" filter="url(#glow)">
+    <circle cx="450" cy="180" r="2">
+      <animate attributeName="r" values="0;4;0" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="430" cy="170" r="1.5">
+      <animate attributeName="r" values="0;3;0" dur="1.2s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1.2s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+    <circle cx="470" cy="170" r="1.5">
+      <animate attributeName="r" values="0;3;0" dur="1.3s" repeatCount="indefinite" begin="0.6s"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1.3s" repeatCount="indefinite" begin="0.6s"/>
+    </circle>
+    <circle cx="440" cy="190" r="1">
+      <animate attributeName="r" values="0;2;0" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" begin="0.2s"/>
+    </circle>
+    <circle cx="460" cy="190" r="1">
+      <animate attributeName="r" values="0;2;0" dur="1.1s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1.1s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+  </g>
+
+  <!-- Katana Slash Lines -->
+  <g stroke="#00f0ff" stroke-width="2" fill="none" filter="url(#glow)" opacity="0.6">
+    <path d="M 80,260 L 180,240">
+      <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="0s"/>
+    </path>
+    <path d="M 720,260 L 820,240">
+      <animate attributeName="opacity" values="0;0.8;0" dur="2s" repeatCount="indefinite" begin="1s"/>
+    </path>
+    <path d="M 150,270 L 250,250">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </path>
+    <path d="M 650,270 L 750,250">
+      <animate attributeName="opacity" values="0;0.6;0" dur="2s" repeatCount="indefinite" begin="1.5s"/>
+    </path>
+  </g>
+
+  <!-- Bottom Status Bar -->
+  <g font-family="'Courier New', monospace" font-size="11" fill="#00f0ff" filter="url(#glow)">
+    <text x="30" y="280">
+      STATUS: ONLINE
+      <animate attributeName="fill" values="#00f0ff;#00ff41;#00f0ff" dur="3s" repeatCount="indefinite"/>
+    </text>
+    <text x="450" y="280" text-anchor="middle">
+      ▓▓▓▓▓▓▓▓▓▓ LOADING SKILLS 100% ▓▓▓▓▓▓▓▓▓▓
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+    </text>
+    <text x="870" y="280" text-anchor="end">
+      MODE: HACKER
+      <animate attributeName="fill" values="#bf00ff;#ff0080;#bf00ff" dur="2s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- Corner Decorations -->
+  <g stroke="#00f0ff" stroke-width="1.5" fill="none" filter="url(#glow)" opacity="0.5">
+    <polyline points="10,30 10,10 30,10"/>
+    <polyline points="870,10 890,10 890,30"/>
+    <polyline points="890,270 890,290 870,290"/>
+    <polyline points="30,290 10,290 10,270"/>
+  </g>
+</svg>
