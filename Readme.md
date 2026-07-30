@@ -1,6 +1,6 @@
 <!-- 
   ╔═══════════════════════════════════════════════════════════════╗
-  ║  🔥 CINEMATIC HACKER GITHUB PROFILE README v2.0 🔥          ║
+  ║  🔥 CINEMATIC HACKER GITHUB PROFILE README v2.1 🔥          ║
   ║  Replace yashraj-ghemud with your actual GitHub username       ║
   ╚═══════════════════════════════════════════════════════════════╝
 -->
@@ -48,13 +48,18 @@
 <!-- 📊 GITHUB STATS -->
 ## <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="30"> GitHub Combat Stats
 
+<!--
+  ⚠️ IMPORTANT: If stats cards show broken images, you need to deploy your own instance!
+  Quick Fix: Follow the steps below
+-->
+
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=yashraj-ghemud&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff&ring_color=00f0ff" width="49%" alt="GitHub Stats"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=yashraj-ghemud&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff&ring_color=00f0ff" width="49%" alt="GitHub Stats"/>
   <img src="https://github-readme-streak-stats.herokuapp.com?user=yashraj-ghemud&theme=radical&hide_border=true&background=0d1117&ring_color=00f0ff&fire_color=ff0080&currStreakLabel=00f0ff&sideLabels=bf00ff&dates=ffffff" width="49%" alt="GitHub Streak"/>
 </p>
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=yashraj-ghemud&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&text_color=bf00ff" width="49%" alt="Top Languages"/>
+  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yashraj-ghemud&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&text_color=bf00ff" width="49%" alt="Top Languages"/>
   <img src="https://github-profile-trophy.vercel.app/?username=yashraj-ghemud&theme=onestar&no-frame=true&no-bg=true&column=4&margin-w=10" width="49%" alt="Trophies"/>
 </p>
 
@@ -127,10 +132,10 @@
 
 <p align="center">
   <a href="https://github.com/yashraj-ghemud/REPO_1">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_1&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
+    <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_1&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
   </a>
   <a href="https://github.com/yashraj-ghemud/REPO_2">
-    <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_2&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
+    <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_2&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
   </a>
 </p>
 
