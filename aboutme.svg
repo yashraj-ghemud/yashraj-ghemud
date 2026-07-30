@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 380" width="700" height="380">
+  <defs>
+    <linearGradient id="cardBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accentLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5ff"/>
+      <stop offset="50%" style="stop-color:#d500f9"/>
+      <stop offset="100%" style="stop-color:#ff0066"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowBig">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Card Background -->
+  <rect x="10" y="10" width="680" height="360" rx="15" fill="url(#cardBg)" stroke="url(#accentLine)" stroke-width="1.5"/>
+
+  <!-- Animated accent line at top -->
+  <rect x="10" y="10" width="680" height="4" rx="2" fill="url(#accentLine)" opacity="0.8">
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- Corner Decorations -->
+  <g stroke="#00e5ff" stroke-width="1" fill="none" opacity="0.3">
+    <polyline points="25,30 25,20 35,20"/>
+    <polyline points="665,20 675,20 675,30"/>
+    <polyline points="675,350 675,360 665,360"/>
+    <polyline points="35,360 25,360 25,350"/>
+  </g>
+
+  <!-- Avatar Circle with Pulse -->
+  <circle cx="80" cy="80" r="30" fill="#0d1117" stroke="#00e5ff" stroke-width="2" filter="url(#glow)">
+    <animate attributeName="stroke-width" values="1.5;2.5;1.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="80" cy="80" r="35" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.3">
+    <animate attributeName="r" values="33;38;33" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="2s" repeatCount="indefinite"/>
+  </circle>
+  <!-- Skull icon in avatar -->
+  <text x="80" y="88" text-anchor="middle" font-size="28" fill="#00e5ff" filter="url(#glow)">💀</text>
+
+  <!-- Name & Title -->
+  <text x="130" y="68" font-family="'Courier New', monospace" font-size="20" font-weight="bold" fill="#00e5ff" filter="url(#glow)">
+    YOUR_USERNAME
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite"/>
+  </text>
+  <text x="130" y="90" font-family="'Courier New', monospace" font-size="13" fill="#d500f9" filter="url(#glow)">
+    alias: "The Ghost Coder" | MODE: HACKER
+    <animate attributeName="fill" values="#d500f9;#ff0066;#d500f9" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Separator -->
+  <line x1="40" y1="115" x2="660" y2="115" stroke="url(#accentLine)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Stats Grid -->
+  <g font-family="'Courier New', monospace" font-size="11">
+    <!-- Row 1 -->
+    <text x="45" y="140" fill="#00e5ff" filter="url(#glow)">
+      ⚡ LOCATION
+    </text>
+    <text x="180" y="140" fill="#8b949e">
+      Somewhere in the Matrix
+    </text>
+
+    <text x="420" y="140" fill="#00e5ff" filter="url(#glow)">
+      ⚡ OS
+    </text>
+    <text x="490" y="140" fill="#8b949e">
+      Kali Linux | Windows 11
+    </text>
+
+    <!-- Row 2 -->
+    <text x="45" y="162" fill="#d500f9" filter="url(#glow)">
+      ⚡ EDITOR
+    </text>
+    <text x="180" y="162" fill="#8b949e">
+      VS Code (Dark Hacker Theme)
+    </text>
+
+    <text x="420" y="162" fill="#d500f9" filter="url(#glow)">
+      ⚡ LEARNING
+    </text>
+    <text x="520" y="162" fill="#8b949e">
+      Quantum Computing | AI/ML
+    </text>
+
+    <!-- Row 3 -->
+    <text x="45" y="184" fill="#ff0066" filter="url(#glow)">
+      ⚡ HOBBIES
+    </text>
+    <text x="180" y="184" fill="#8b949e">
+      CTF | Open Source | Breaking Systems
+    </text>
+  </g>
+
+  <!-- Separator -->
+  <line x1="40" y1="200" x2="660" y2="200" stroke="url(#accentLine)" stroke-width="0.5" opacity="0.3"/>
+
+  <!-- Languages Section -->
+  <text x="45" y="225" font-family="'Courier New', monospace" font-size="12" fill="#00e5ff" filter="url(#glow)">
+    LANGUAGES:
+    <animate attributeName="opacity" values="0.8;1;0.8" dur="2s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Animated progress bars -->
+  <g font-family="'Courier New', monospace" font-size="10">
+    <!-- JavaScript -->
+    <text x="45" y="248" fill="#8b949e">JavaScript/TS</text>
+    <rect x="160" y="239" width="200" height="10" rx="2" fill="#21262d"/>
+    <rect x="160" y="239" width="0" height="10" rx="2" fill="#00e5ff" opacity="0.7">
+      <animate attributeName="width" from="0" to="190" dur="1.5s" begin="0.5s" fill="freeze"/>
+    </rect>
+    <text x="370" y="248" fill="#00e5ff">95%</text>
+
+    <!-- Python -->
+    <text x="45" y="268" fill="#8b949e">Python</text>
+    <rect x="160" y="259" width="200" height="10" rx="2" fill="#21262d"/>
+    <rect x="160" y="259" width="0" height="10" rx="2" fill="#d500f9" opacity="0.7">
+      <animate attributeName="width" from="0" to="180" dur="1.5s" begin="0.7s" fill="freeze"/>
+    </rect>
+    <text x="370" y="268" fill="#d500f9">90%</text>
+
+    <!-- Rust -->
+    <text x="45" y="288" fill="#8b949e">Rust / Go</text>
+    <rect x="160" y="279" width="200" height="10" rx="2" fill="#21262d"/>
+    <rect x="160" y="279" width="0" height="10" rx="2" fill="#ff0066" opacity="0.7">
+      <animate attributeName="width" from="0" to="160" dur="1.5s" begin="0.9s" fill="freeze"/>
+    </rect>
+    <text x="370" y="288" fill="#ff0066">80%</text>
+
+    <!-- C++ -->
+    <text x="45" y="308" fill="#8b949e">C++ / Bash</text>
+    <rect x="160" y="299" width="200" height="10" rx="2" fill="#21262d"/>
+    <rect x="160" y="299" width="0" height="10" rx="2" fill="#00e5ff" opacity="0.6">
+      <animate attributeName="width" from="0" to="150" dur="1.5s" begin="1.1s" fill="freeze"/>
+    </rect>
+    <text x="370" y="308" fill="#00e5ff">75%</text>
+  </g>
+
+  <!-- Right side - Frameworks -->
+  <g font-family="'Courier New', monospace" font-size="10">
+    <text x="430" y="225" fill="#ff0066" filter="url(#glow)">FRAMEWORKS:</text>
+    <text x="430" y="248" fill="#8b949e">► React / Next.js</text>
+    <text x="430" y="268" fill="#8b949e">► Node.js / Express</text>
+    <text x="430" y="288" fill="#8b949e">► Django / FastAPI</text>
+    <text x="430" y="308" fill="#8b949e">► Docker / Kubernetes</text>
+  </g>
+
+  <!-- Bottom Motto -->
+  <line x1="40" y1="325" x2="660" y2="325" stroke="url(#accentLine)" stroke-width="0.5" opacity="0.3"/>
+  <text x="350" y="350" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#00e5ff" filter="url(#glow)">
+    "Code hard or go home. There is no debug button in real life."
+    <animate attributeName="opacity" values="0.5;1;0.5" dur="3s" repeatCount="indefinite"/>
+  </text>
+
+  <!-- Scanline -->
+  <rect x="10" y="10" width="680" height="1.5" fill="#00e5ff" opacity="0.03">
+    <animate attributeName="y" values="10;360;10" dur="5s" repeatCount="indefinite"/>
+  </rect>
+</svg>

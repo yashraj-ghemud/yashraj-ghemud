@@ -1,179 +1,257 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 250" width="800" height="250">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
   <defs>
     <linearGradient id="darkBg" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#0a0a0a"/>
-      <stop offset="100%" style="stop-color:#1a0a2e"/>
+      <stop offset="0%" style="stop-color:#050510"/>
+      <stop offset="50%" style="stop-color:#0a0a2e"/>
+      <stop offset="100%" style="stop-color:#050510"/>
     </linearGradient>
-    <linearGradient id="energyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#00f0ff"/>
-      <stop offset="50%" style="stop-color:#bf00ff"/>
-      <stop offset="100%" style="stop-color:#ff0080"/>
+    <linearGradient id="energyBeam" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00e5ff;stop-opacity:0"/>
+      <stop offset="20%" style="stop-color:#00e5ff;stop-opacity:1"/>
+      <stop offset="80%" style="stop-color:#d500f9;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff0066;stop-opacity:0"/>
     </linearGradient>
+    <radialGradient id="impactGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.8"/>
+      <stop offset="25%" style="stop-color:#00e5ff;stop-opacity:0.5"/>
+      <stop offset="50%" style="stop-color:#d500f9;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#ff0066;stop-opacity:0"/>
+    </radialGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="glowStrong">
-      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glowBig">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glowHuge">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
 
-  <rect width="800" height="250" fill="url(#darkBg)"/>
+  <rect width="900" height="280" fill="url(#darkBg)"/>
 
   <!-- Speed Lines -->
-  <g stroke="#00f0ff" stroke-width="1" opacity="0.3">
-    <line x1="0" y1="50" x2="800" y2="50" stroke-dasharray="2,20">
-      <animate attributeName="stroke-dashoffset" values="0;-22" dur="0.3s" repeatCount="indefinite"/>
+  <g stroke="#00e5ff" stroke-width="0.8" opacity="0.2">
+    <line x1="0" y1="40" x2="900" y2="40" stroke-dasharray="3,25">
+      <animate attributeName="stroke-dashoffset" values="0;-28" dur="0.25s" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="80" x2="800" y2="80" stroke-dasharray="2,30">
-      <animate attributeName="stroke-dashoffset" values="0;-32" dur="0.25s" repeatCount="indefinite"/>
+    <line x1="0" y1="70" x2="900" y2="70" stroke-dasharray="2,35">
+      <animate attributeName="stroke-dashoffset" values="0;-37" dur="0.2s" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="125" x2="800" y2="125" stroke-dasharray="2,25">
-      <animate attributeName="stroke-dashoffset" values="0;-27" dur="0.28s" repeatCount="indefinite"/>
+    <line x1="0" y1="110" x2="900" y2="110" stroke-dasharray="4,30">
+      <animate attributeName="stroke-dashoffset" values="0;-34" dur="0.22s" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="170" x2="800" y2="170" stroke-dasharray="2,20">
-      <animate attributeName="stroke-dashoffset" values="0;-22" dur="0.32s" repeatCount="indefinite"/>
+    <line x1="0" y1="140" x2="900" y2="140" stroke-dasharray="3,28">
+      <animate attributeName="stroke-dashoffset" values="0;-31" dur="0.28s" repeatCount="indefinite"/>
     </line>
-    <line x1="0" y1="200" x2="800" y2="200" stroke-dasharray="2,30">
-      <animate attributeName="stroke-dashoffset" values="0;-32" dur="0.26s" repeatCount="indefinite"/>
+    <line x1="0" y1="170" x2="900" y2="170" stroke-dasharray="2,32">
+      <animate attributeName="stroke-dashoffset" values="0;-34" dur="0.24s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="210" x2="900" y2="210" stroke-dasharray="3,25">
+      <animate attributeName="stroke-dashoffset" values="0;-28" dur="0.26s" repeatCount="indefinite"/>
+    </line>
+    <line x1="0" y1="240" x2="900" y2="240" stroke-dasharray="2,35">
+      <animate attributeName="stroke-dashoffset" values="0;-37" dur="0.3s" repeatCount="indefinite"/>
     </line>
   </g>
 
-  <!-- Left Fighter - Stick Figure in Action Pose -->
-  <g transform="translate(200, 125)" filter="url(#glow)">
-    <!-- Body -->
-    <line x1="0" y1="-40" x2="0" y2="0" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
-    <!-- Head -->
-    <circle cx="0" cy="-50" r="10" fill="none" stroke="#00f0ff" stroke-width="2"/>
-    <!-- Right Arm - Punching -->
-    <line x1="0" y1="-30" x2="50" y2="-35" stroke="#00f0ff" stroke-width="3" stroke-linecap="round">
-      <animate attributeName="x2" values="30;50;30" dur="0.5s" repeatCount="indefinite"/>
-    </line>
-    <!-- Left Arm -->
-    <line x1="0" y1="-30" x2="-20" y2="-15" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
-    <!-- Right Leg -->
-    <line x1="0" y1="0" x2="25" y2="35" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
-    <!-- Left Leg -->
-    <line x1="0" y1="0" x2="-20" y2="35" stroke="#00f0ff" stroke-width="3" stroke-linecap="round"/>
-    
+  <!-- Ground Line -->
+  <line x1="50" y1="230" x2="850" y2="230" stroke="#1a1a3e" stroke-width="1" opacity="0.5"/>
+  <g stroke="#00e5ff" stroke-width="0.5" opacity="0.1">
+    <line x1="100" y1="230" x2="100" y2="240"/>
+    <line x1="200" y1="230" x2="200" y2="240"/>
+    <line x1="300" y1="230" x2="300" y2="240"/>
+    <line x1="400" y1="230" x2="400" y2="240"/>
+    <line x1="500" y1="230" x2="500" y2="240"/>
+    <line x1="600" y1="230" x2="600" y2="240"/>
+    <line x1="700" y1="230" x2="700" y2="240"/>
+    <line x1="800" y1="230" x2="800" y2="240"/>
+  </g>
+
+  <!-- LEFT FIGHTER - Dynamic Punching Pose -->
+  <g transform="translate(220, 140)" filter="url(#glow)">
     <!-- Energy Aura -->
-    <ellipse cx="0" cy="-10" rx="35" ry="55" fill="none" stroke="#00f0ff" stroke-width="0.5" opacity="0.3">
-      <animate attributeName="rx" values="30;40;30" dur="1s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="50;60;50" dur="1s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="1s" repeatCount="indefinite"/>
+    <ellipse cx="0" cy="-10" rx="40" ry="60" fill="none" stroke="#00e5ff" stroke-width="0.8" opacity="0.15">
+      <animate attributeName="rx" values="35;50;35" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="55;70;55" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.25;0.08" dur="1.5s" repeatCount="indefinite"/>
     </ellipse>
-  </g>
+    <ellipse cx="0" cy="-10" rx="30" ry="45" fill="none" stroke="#00e5ff" stroke-width="0.5" opacity="0.1">
+      <animate attributeName="rx" values="25;40;25" dur="1.2s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="ry" values="40;55;40" dur="1.2s" repeatCount="indefinite" begin="0.3s"/>
+    </ellipse>
 
-  <!-- Right Fighter - Stick Figure in Defense -->
-  <g transform="translate(600, 125)" filter="url(#glow)">
-    <!-- Body -->
-    <line x1="0" y1="-40" x2="0" y2="0" stroke="#ff0080" stroke-width="3" stroke-linecap="round"/>
     <!-- Head -->
-    <circle cx="0" cy="-50" r="10" fill="none" stroke="#ff0080" stroke-width="2"/>
-    <!-- Right Arm - Blocking -->
-    <line x1="0" y1="-30" x2="-25" y2="-40" stroke="#ff0080" stroke-width="3" stroke-linecap="round">
-      <animate attributeName="y2" values="-45;-35;-45" dur="0.5s" repeatCount="indefinite"/>
+    <circle cx="0" cy="-55" r="12" fill="#0d1117" stroke="#00e5ff" stroke-width="2"/>
+    <!-- Eye glow -->
+    <circle cx="4" cy="-57" r="2" fill="#00e5ff" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Body -->
+    <line x1="0" y1="-43" x2="0" y2="0" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Arm - Extended Punch -->
+    <line x1="0" y1="-35" x2="55" y2="-40" stroke="#00e5ff" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="x2" values="35;60;35" dur="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="y2" values="-45;-35;-45" dur="0.4s" repeatCount="indefinite"/>
     </line>
-    <!-- Left Arm -->
-    <line x1="0" y1="-30" x2="20" y2="-15" stroke="#ff0080" stroke-width="3" stroke-linecap="round"/>
-    <!-- Right Leg -->
-    <line x1="0" y1="0" x2="-25" y2="35" stroke="#ff0080" stroke-width="3" stroke-linecap="round"/>
-    <!-- Left Leg -->
-    <line x1="0" y1="0" x2="20" y2="35" stroke="#ff0080" stroke-width="3" stroke-linecap="round"/>
-    
-    <!-- Energy Aura -->
-    <ellipse cx="0" cy="-10" rx="35" ry="55" fill="none" stroke="#ff0080" stroke-width="0.5" opacity="0.3">
-      <animate attributeName="rx" values="30;40;30" dur="1.2s" repeatCount="indefinite"/>
-      <animate attributeName="ry" values="50;60;50" dur="1.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.1;0.4;0.1" dur="1.2s" repeatCount="indefinite"/>
-    </ellipse>
+    <!-- Fist glow -->
+    <circle cx="55" cy="-40" r="5" fill="#00e5ff" opacity="0.3" filter="url(#glowBig)">
+      <animate attributeName="cx" values="35;60;35" dur="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-45;-35;-45" dur="0.4s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.5;0.1" dur="0.4s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Left Arm - Guard -->
+    <line x1="0" y1="-35" x2="-20" y2="-20" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Leg - Forward -->
+    <line x1="0" y1="0" x2="30" y2="40" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Leg - Back -->
+    <line x1="0" y1="0" x2="-25" y2="40" stroke="#00e5ff" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Afterimage effect -->
+    <line x1="0" y1="-35" x2="45" y2="-43" stroke="#00e5ff" stroke-width="1.5" opacity="0.15" stroke-linecap="round">
+      <animate attributeName="opacity" values="0;0.2;0" dur="0.4s" repeatCount="indefinite"/>
+    </line>
   </g>
 
-  <!-- Collision / Impact Effect -->
-  <g transform="translate(400, 110)" filter="url(#glowStrong)">
-    <!-- Central Explosion -->
-    <circle cx="0" cy="0" r="5" fill="#ffffff" opacity="0.8">
-      <animate attributeName="r" values="0;20;0" dur="0.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.9;0;0.9" dur="0.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="0" cy="0" r="3" fill="#00f0ff">
-      <animate attributeName="r" values="0;15;0" dur="0.8s" repeatCount="indefinite" begin="0.1s"/>
-      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" begin="0.1s"/>
-    </circle>
-    <circle cx="0" cy="0" r="2" fill="#ff0080">
-      <animate attributeName="r" values="0;12;0" dur="0.8s" repeatCount="indefinite" begin="0.2s"/>
-      <animate attributeName="opacity" values="1;0;1" dur="0.8s" repeatCount="indefinite" begin="0.2s"/>
+  <!-- RIGHT FIGHTER - Defensive Counter Stance -->
+  <g transform="translate(680, 140)" filter="url(#glow)">
+    <!-- Energy Aura -->
+    <ellipse cx="0" cy="-10" rx="40" ry="60" fill="none" stroke="#ff0066" stroke-width="0.8" opacity="0.15">
+      <animate attributeName="rx" values="35;50;35" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="ry" values="55;70;55" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.08;0.25;0.08" dur="1.8s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Head -->
+    <circle cx="0" cy="-55" r="12" fill="#0d1117" stroke="#ff0066" stroke-width="2"/>
+    <!-- Eye glow -->
+    <circle cx="-4" cy="-57" r="2" fill="#ff0066" opacity="0.8">
+      <animate attributeName="opacity" values="0.5;1;0.5" dur="1.2s" repeatCount="indefinite"/>
     </circle>
 
-    <!-- Impact Lines -->
-    <g stroke="url(#energyGrad)" stroke-width="2">
-      <line x1="0" y1="0" x2="-30" y2="-30">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite"/>
-      </line>
-      <line x1="0" y1="0" x2="30" y2="-30">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.1s"/>
-      </line>
-      <line x1="0" y1="0" x2="-30" y2="30">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.2s"/>
-      </line>
-      <line x1="0" y1="0" x2="30" y2="30">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.3s"/>
-      </line>
-      <line x1="0" y1="0" x2="0" y2="-40">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.15s"/>
-      </line>
-      <line x1="0" y1="0" x2="0" y2="40">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.25s"/>
-      </line>
-      <line x1="0" y1="0" x2="-40" y2="0">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.35s"/>
-      </line>
-      <line x1="0" y1="0" x2="40" y2="0">
-        <animate attributeName="opacity" values="0;1;0" dur="0.6s" repeatCount="indefinite" begin="0.05s"/>
-      </line>
+    <!-- Body -->
+    <line x1="0" y1="-43" x2="0" y2="0" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Left Arm - Blocking -->
+    <line x1="0" y1="-35" x2="-30" y2="-45" stroke="#ff0066" stroke-width="3" stroke-linecap="round">
+      <animate attributeName="y2" values="-50;-40;-50" dur="0.5s" repeatCount="indefinite"/>
+    </line>
+    <!-- Shield effect -->
+    <ellipse cx="-30" cy="-45" rx="10" ry="15" fill="none" stroke="#ff0066" stroke-width="1" opacity="0.2">
+      <animate attributeName="opacity" values="0.1;0.3;0.1" dur="0.5s" repeatCount="indefinite"/>
+      <animate attributeName="cy" values="-50;-40;-50" dur="0.5s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- Right Arm - Charging -->
+    <line x1="0" y1="-35" x2="25" y2="-20" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+
+    <!-- Right Leg -->
+    <line x1="0" y1="0" x2="-30" y2="40" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+    <!-- Left Leg -->
+    <line x1="0" y1="0" x2="25" y2="40" stroke="#ff0066" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- CENTRAL IMPACT - Multi-layered Explosion -->
+  <g transform="translate(450, 120)" filter="url(#glowHuge)">
+    <!-- Core white flash -->
+    <circle cx="0" cy="0" r="3" fill="#ffffff" opacity="0.9">
+      <animate attributeName="r" values="0;8;0" dur="0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.9;0;0.9" dur="0.6s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Cyan ring -->
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#00e5ff" stroke-width="2" opacity="0.6">
+      <animate attributeName="r" values="5;30;5" dur="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0;0.6" dur="0.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Pink ring -->
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#ff0066" stroke-width="1.5" opacity="0.5">
+      <animate attributeName="r" values="5;25;5" dur="0.8s" repeatCount="indefinite" begin="0.15s"/>
+      <animate attributeName="opacity" values="0.5;0;0.5" dur="0.8s" repeatCount="indefinite" begin="0.15s"/>
+    </circle>
+
+    <!-- Purple ring -->
+    <circle cx="0" cy="0" r="5" fill="none" stroke="#d500f9" stroke-width="1" opacity="0.4">
+      <animate attributeName="r" values="5;35;5" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="0.4;0;0.4" dur="1s" repeatCount="indefinite" begin="0.3s"/>
+    </circle>
+
+    <!-- Radial impact glow -->
+    <circle cx="0" cy="0" r="15" fill="url(#impactGlow)" opacity="0.5">
+      <animate attributeName="r" values="10;30;10" dur="0.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.1;0.3" dur="0.8s" repeatCount="indefinite"/>
+    </circle>
+
+    <!-- Impact Rays -->
+    <g stroke="#ffffff" stroke-width="1.5" stroke-linecap="round">
+      <line x1="0" y1="0" x2="-35" y2="-35" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite"/></line>
+      <line x1="0" y1="0" x2="35" y2="-35" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite" begin="0.06s"/></line>
+      <line x1="0" y1="0" x2="-35" y2="35" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite" begin="0.12s"/></line>
+      <line x1="0" y1="0" x2="35" y2="35" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite" begin="0.18s"/></line>
+      <line x1="0" y1="0" x2="0" y2="-45" opacity="0"><animate attributeName="opacity" values="0;0.7;0" dur="0.5s" repeatCount="indefinite" begin="0.09s"/></line>
+      <line x1="0" y1="0" x2="0" y2="45" opacity="0"><animate attributeName="opacity" values="0;0.5;0" dur="0.5s" repeatCount="indefinite" begin="0.15s"/></line>
+      <line x1="0" y1="0" x2="-45" y2="0" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite" begin="0.03s"/></line>
+      <line x1="0" y1="0" x2="45" y2="0" opacity="0"><animate attributeName="opacity" values="0;0.6;0" dur="0.5s" repeatCount="indefinite" begin="0.21s"/></line>
     </g>
   </g>
 
-  <!-- Energy Beam Between Fighters -->
-  <line x1="250" y1="95" x2="350" y2="105" stroke="url(#energyGrad)" stroke-width="3" filter="url(#glowStrong)" opacity="0.6">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.5s" repeatCount="indefinite"/>
-  </line>
-  <line x1="450" y1="105" x2="550" y2="95" stroke="url(#energyGrad)" stroke-width="3" filter="url(#glowStrong)" opacity="0.6">
-    <animate attributeName="opacity" values="0.3;0.8;0.3" dur="0.5s" repeatCount="indefinite" begin="0.25s"/>
-  </line>
-
-  <!-- Floating Particles -->
-  <g fill="#00f0ff" filter="url(#glow)">
-    <circle cx="100" cy="60" r="1.5">
-      <animate attributeName="cy" values="60;40;60" dur="3s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="3s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="300" cy="180" r="1">
-      <animate attributeName="cy" values="180;160;180" dur="2.5s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="2.5s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="500" cy="50" r="1.5">
-      <animate attributeName="cy" values="50;30;50" dur="2.8s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2.8s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="700" cy="190" r="1">
-      <animate attributeName="cy" values="190;170;190" dur="3.2s" repeatCount="indefinite"/>
-      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="3.2s" repeatCount="indefinite"/>
-    </circle>
+  <!-- Energy Beams Between Fighters -->
+  <g filter="url(#glowBig)">
+    <line x1="280" y1="100" x2="400" y2="115" stroke="url(#energyBeam)" stroke-width="3" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="0.4s" repeatCount="indefinite"/>
+    </line>
+    <line x1="500" y1="115" x2="620" y2="100" stroke="url(#energyBeam)" stroke-width="3" opacity="0.5">
+      <animate attributeName="opacity" values="0.2;0.7;0.2" dur="0.4s" repeatCount="indefinite" begin="0.2s"/>
+    </line>
   </g>
 
-  <!-- Anime Style Text -->
-  <g filter="url(#glowStrong)">
-    <text x="400" y="225" text-anchor="middle" font-family="'Impact', sans-serif" font-size="22" fill="#ff0080" letter-spacing="5">
+  <!-- Debris / Particles -->
+  <g filter="url(#glow)">
+    <rect x="420" y="90" width="3" height="3" fill="#00e5ff" transform="rotate(45,421,91)">
+      <animate attributeName="y" values="90;70;90" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="470" y="95" width="2" height="2" fill="#ff0066" transform="rotate(30,471,96)">
+      <animate attributeName="y" values="95;75;95" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
+      <animate attributeName="opacity" values="0.3;0.7;0.3" dur="1.8s" repeatCount="indefinite" begin="0.5s"/>
+    </rect>
+    <rect x="440" y="100" width="2.5" height="2.5" fill="#d500f9" transform="rotate(60,441,101)">
+      <animate attributeName="y" values="100;80;100" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="2.2s" repeatCount="indefinite" begin="0.3s"/>
+    </rect>
+  </g>
+
+  <!-- Floating Dust Particles -->
+  <g fill="#00e5ff" filter="url(#glow)">
+    <circle cx="120" cy="60" r="1.5"><animate attributeName="cy" values="60;45;60" dur="4s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="4s" repeatCount="indefinite"/></circle>
+    <circle cx="340" cy="200" r="1"><animate attributeName="cy" values="200;185;200" dur="3s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="560" cy="50" r="1.5"><animate attributeName="cy" values="50;35;50" dur="3.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="3.5s" repeatCount="indefinite"/></circle>
+    <circle cx="780" cy="200" r="1"><animate attributeName="cy" values="200;185;200" dur="3.8s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <g fill="#ff0066" filter="url(#glow)">
+    <circle cx="180" cy="180" r="1"><animate attributeName="cy" values="180;165;180" dur="3.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.5;0.2" dur="3.2s" repeatCount="indefinite"/></circle>
+    <circle cx="720" cy="60" r="1.2"><animate attributeName="cy" values="60;45;60" dur="4.2s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <!-- Anime Impact Text -->
+  <g filter="url(#glowBig)">
+    <text x="450" y="260" text-anchor="middle" font-family="'Impact', 'Arial Black', sans-serif" font-size="24" fill="#ff0066" letter-spacing="6">
       CODE. FIGHT. CONQUER.
-      <animate attributeName="opacity" values="0.7;1;0.7" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;1;0.6" dur="1.5s" repeatCount="indefinite"/>
+      <animate attributeName="letter-spacing" values="4;8;4" dur="2s" repeatCount="indefinite"/>
     </text>
   </g>
+
+  <!-- Screen Shake Effect (subtle border pulse) -->
+  <rect x="0" y="0" width="900" height="280" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0">
+    <animate attributeName="opacity" values="0;0.08;0" dur="0.8s" repeatCount="indefinite"/>
+  </rect>
 </svg>

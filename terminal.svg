@@ -1,115 +1,130 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 420" width="640" height="420">
   <defs>
     <linearGradient id="termBg" x1="0%" y1="0%" x2="0%" y2="100%">
-      <stop offset="0%" style="stop-color:#0d1117;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#161b22;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    <linearGradient id="titleBar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#1f2937"/>
     </linearGradient>
     <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <filter id="screenGlow">
-      <feGaussianBlur stdDeviation="1" result="coloredBlur"/>
-      <feMerge>
-        <feMergeNode in="coloredBlur"/>
-        <feMergeNode in="SourceGraphic"/>
-      </feMerge>
+    <filter id="glowSoft">
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
-    <clipPath id="terminalClip">
-      <rect x="20" y="40" width="560" height="340" rx="5"/>
+    <clipPath id="termClip">
+      <rect x="20" y="45" width="600" height="335" rx="0 0 8 8"/>
     </clipPath>
   </defs>
 
+  <!-- Shadow -->
+  <rect x="25" y="15" width="600" height="390" rx="12" fill="#000" opacity="0.4"/>
+
   <!-- Terminal Window -->
-  <rect x="20" y="10" width="560" height="380" rx="10" fill="#1a1a2e" stroke="#00f0ff" stroke-width="1"/>
-  
+  <rect x="20" y="10" width="600" height="390" rx="12" fill="url(#termBg)" stroke="#00e5ff" stroke-width="0.8" opacity="0.95"/>
+
   <!-- Title Bar -->
-  <rect x="20" y="10" width="560" height="30" rx="10" fill="#16213e"/>
-  <rect x="20" y="30" width="560" height="10" fill="#16213e"/>
-  <circle cx="45" cy="25" r="6" fill="#ff5f56"/>
-  <circle cx="65" cy="25" r="6" fill="#ffbd2e"/>
-  <circle cx="85" cy="25" r="6" fill="#27c93f"/>
-  <text x="300" y="29" text-anchor="middle" font-family="monospace" font-size="12" fill="#00f0ff" filter="url(#glow)">hacker@terminal: ~</text>
+  <rect x="20" y="10" width="600" height="35" rx="12" fill="url(#titleBar)"/>
+  <rect x="20" y="35" width="600" height="10" fill="url(#titleBar)"/>
+
+  <!-- Window Buttons -->
+  <circle cx="48" cy="28" r="7" fill="#ff5f56" stroke="#e0443e" stroke-width="0.5"/>
+  <circle cx="70" cy="28" r="7" fill="#ffbd2e" stroke="#dea123" stroke-width="0.5"/>
+  <circle cx="92" cy="28" r="7" fill="#27c93f" stroke="#1aab29" stroke-width="0.5"/>
+
+  <!-- Title Text -->
+  <text x="320" y="33" text-anchor="middle" font-family="'Courier New', monospace" font-size="12" fill="#00e5ff" filter="url(#glowSoft)" letter-spacing="1">
+    root@kali ~ /home/hacker
+  </text>
 
   <!-- Terminal Content -->
-  <g clip-path="url(#terminalClip)" font-family="'Courier New', monospace" font-size="13">
-    <!-- Line 1 - System Boot -->
-    <text x="35" y="65" fill="#00ff41" filter="url(#screenGlow)">
-      root@kali:~$ ./init_system.sh
-      <animate attributeName="opacity" values="0;1" dur="0.5s" fill="freeze"/>
-    </text>
-    
-    <!-- Line 2 -->
-    <text x="35" y="85" fill="#00f0ff" filter="url(#screenGlow)">
-      [██████████████████████████] 100% SYSTEM LOADED
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.5s" fill="freeze"/>
+  <g clip-path="url(#termClip)" font-family="'Courier New', monospace" font-size="12.5">
+
+    <!-- Line 1 - Boot -->
+    <text x="35" y="68" fill="#00ff41" filter="url(#glowSoft)">
+      root@kali:~$ ./init_system.sh --stealth-mode
+      <animate attributeName="opacity" values="0;1" dur="0.4s" fill="freeze"/>
     </text>
 
-    <!-- Line 3 -->
-    <text x="35" y="110" fill="#ff0080" filter="url(#screenGlow)">
-      ⚡ NEURAL_INTERFACE: CONNECTED
+    <!-- Line 2 - Progress bar -->
+    <text x="35" y="88" fill="#00e5ff" filter="url(#glowSoft)">
+      [████████████████████████████████] 100% SYSTEM LOADED
+      <animate attributeName="opacity" values="0;1" dur="0.4s" begin="0.5s" fill="freeze"/>
+    </text>
+
+    <!-- Line 3-5 - Status -->
+    <text x="35" y="112" fill="#ff0066" filter="url(#glowSoft)">
+      ⚡ NEURAL_INTERFACE ......... CONNECTED
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1s" fill="freeze"/>
     </text>
-
-    <!-- Line 4 -->
-    <text x="35" y="135" fill="#bf00ff" filter="url(#screenGlow)">
-      ⚡ SKILL_TREE: UNLOCKED
+    <text x="35" y="132" fill="#d500f9" filter="url(#glowSoft)">
+      ⚡ SKILL_TREE .............. UNLOCKED
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.3s" fill="freeze"/>
     </text>
-
-    <!-- Line 5 -->
-    <text x="35" y="160" fill="#00f0ff" filter="url(#screenGlow)">
-      ⚡ COMBAT_MODE: ACTIVATED
+    <text x="35" y="152" fill="#00e5ff" filter="url(#glowSoft)">
+      ⚡ COMBAT_MODE ............. ACTIVATED
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="1.6s" fill="freeze"/>
     </text>
 
-    <!-- Line 6 - Separator -->
-    <text x="35" y="185" fill="#333" filter="url(#screenGlow)">
-      ──────────────────────────────────────
+    <!-- Separator -->
+    <text x="35" y="175" fill="#333">
+      ──────────────────────────────────────────────
       <animate attributeName="opacity" values="0;1" dur="0.2s" begin="1.8s" fill="freeze"/>
     </text>
 
-    <!-- Line 7 -->
-    <text x="35" y="210" fill="#00ff41" filter="url(#screenGlow)">
-      root@kali:~$ cat skills.txt
+    <!-- Skills heading -->
+    <text x="35" y="198" fill="#00ff41" filter="url(#glowSoft)">
+      root@kali:~$ cat /skills/arsenal.txt
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2s" fill="freeze"/>
     </text>
 
-    <!-- Skills with staggered animation -->
-    <text x="35" y="235" fill="#00f0ff" filter="url(#screenGlow)">
-      ► Full-Stack Development ████████████ MASTER
+    <!-- Skills with animated progress bars -->
+    <text x="35" y="222" fill="#00e5ff" filter="url(#glowSoft)">
+      ► Full-Stack Dev  ████████████████████ MASTER
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.3s" fill="freeze"/>
     </text>
-    <text x="35" y="255" fill="#00f0ff" filter="url(#screenGlow)">
-      ► System Hacking ████████████████ LEGEND
+    <text x="35" y="244" fill="#00e5ff" filter="url(#glowSoft)">
+      ► System Hacking  ████████████████████ LEGEND
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.5s" fill="freeze"/>
     </text>
-    <text x="35" y="275" fill="#00f0ff" filter="url(#screenGlow)">
-      ► Cloud Architecture ████████████ EXPERT
+    <text x="35" y="266" fill="#00e5ff" filter="url(#glowSoft)">
+      ► Cloud & DevOps  ████████████████░░░░ EXPERT
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.7s" fill="freeze"/>
     </text>
-    <text x="35" y="295" fill="#00f0ff" filter="url(#screenGlow)">
-      ► AI/ML Engineering ████████████ EXPERT
+    <text x="35" y="288" fill="#00e5ff" filter="url(#glowSoft)">
+      ► AI/ML Engineer  ████████████████░░░░ EXPERT
       <animate attributeName="opacity" values="0;1" dur="0.3s" begin="2.9s" fill="freeze"/>
     </text>
 
-    <!-- Blinking Cursor -->
-    <text x="35" y="325" fill="#00ff41" filter="url(#screenGlow)">
+    <!-- Separator 2 -->
+    <text x="35" y="310" fill="#333">
+      ──────────────────────────────────────────────
+      <animate attributeName="opacity" values="0;1" dur="0.2s" begin="3.1s" fill="freeze"/>
+    </text>
+
+    <!-- Blinking cursor -->
+    <text x="35" y="335" fill="#00ff41" filter="url(#glowSoft)">
       root@kali:~$ █
-      <animate attributeName="opacity" values="1;0;1" dur="1s" begin="3.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="1;0;1" dur="1s" begin="3.4s" repeatCount="indefinite"/>
     </text>
   </g>
 
   <!-- Scanline Effect -->
-  <rect x="20" y="40" width="560" height="2" fill="#00f0ff" opacity="0.05">
-    <animate attributeName="y" values="40;380;40" dur="3s" repeatCount="indefinite"/>
+  <rect x="20" y="45" width="600" height="2" fill="#00e5ff" opacity="0.03">
+    <animate attributeName="y" values="45;375;45" dur="4s" repeatCount="indefinite"/>
   </rect>
 
-  <!-- CRT Effect - slight flicker -->
-  <rect x="20" y="10" width="560" height="380" rx="10" fill="transparent" stroke="#00f0ff" stroke-width="0.5" opacity="0.1">
-    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="0.1s" repeatCount="indefinite"/>
+  <!-- CRT Flicker -->
+  <rect x="20" y="10" width="600" height="390" rx="12" fill="transparent" stroke="#00e5ff" stroke-width="0.3" opacity="0.05">
+    <animate attributeName="opacity" values="0.02;0.08;0.02" dur="0.15s" repeatCount="indefinite"/>
   </rect>
+
+  <!-- Reflection Line -->
+  <line x1="20" y1="10" x2="620" y2="10" stroke="#00e5ff" stroke-width="0.5" opacity="0.1">
+    <animate attributeName="opacity" values="0.05;0.15;0.05" dur="3s" repeatCount="indefinite"/>
+  </line>
 </svg>
