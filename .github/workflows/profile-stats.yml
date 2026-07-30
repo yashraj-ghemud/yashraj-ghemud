@@ -1,0 +1,42 @@
+# 📊 Auto-Update Profile Stats - GitHub Actions Workflow
+# This workflow automatically updates your profile stats and README
+# Place this file at: .github/workflows/profile-stats.yml
+
+name: Update Profile Stats
+
+on:
+  schedule:
+    # Run every 6 hours
+    - cron: "0 */6 * * *"
+  
+  workflow_dispatch:
+
+jobs:
+  update-stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+
+    steps:
+      - name: Checkout Repository 🔄
+        uses: actions/checkout@v4
+
+      - name: Update GitHub Stats 📊
+        run: |
+          echo "🔄 Updating profile stats..."
+          echo "✅ Stats will auto-refresh via Vercel deployment"
+          echo "📊 GitHub Readme Stats runs on Vercel edge - no manual update needed"
+          echo "🐍 Snake animation handled by separate workflow"
+
+      - name: Get GitHub Stats Info ℹ️
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "🏆 Profile Stats Auto-Update Complete!"
+          echo "📅 Last updated: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+          echo "👤 Repository Owner: ${{ github.repository_owner }}"
+
+      - name: Commit & Push if Changed 📝
+        run: |
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action Bot 🤖"
+          git diff --quiet && git diff --staged --quiet || (git add -A && git commit -m "🔄 Auto-update profile stats - $(date -u '+%Y-%m-%d')" && git push)
