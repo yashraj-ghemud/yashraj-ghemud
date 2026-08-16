@@ -1,167 +1,120 @@
-<!-- 
-  ╔═══════════════════════════════════════════════════════════════╗
-  ║  🔥 CINEMATIC HACKER GITHUB PROFILE README v2.1 🔥          ║
-  ║  Replace yashraj-ghemud with your actual GitHub username       ║
-  ╚═══════════════════════════════════════════════════════════════╝
--->
-
-<!-- 🎬 CINEMATIC BANNER -->
-<img width="100%" src="banner.svg" alt="Hacker Developer Banner"/>
-
-<!-- 💥 FIGHTING ANIMATION -->
-<img width="100%" src="fighting.svg" alt="Code Fight Animation"/>
-
-<!-- ⚡ TYPING ANIMATION -->
 <p align="center">
-  <a href="https://github.com/yashraj-ghemud">
-    <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=600&size=28&duration=3000&pause=1000&color=00F0FF&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=120&lines=%E2%96%8C+Hacker+by+Day+%F0%9F%92%BB;%E2%96%8C+Developer+by+Night+%F0%9F%8C%99;%E2%96%8C+Code+is+my+Weapon+%E2%9A%94%EF%B8%8F;%E2%96%8C+Breaking+Limits+Since+Forever+%F0%9F%94%A5" alt="Typing SVG" />
-  </a>
+  <img src="./.github/readme-assets/blueprint.gif" alt="Animated blueprint / system visual for yashraj-ghemud" width="100%" />
 </p>
 
-<!-- 🔥 VISITOR COUNTER & BADGES -->
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=yashraj-ghemud&style=for-the-badge&color=00f0ff&label=PROFILE+VIEWS" alt="Profile Views"/>
-  <img src="https://img.shields.io/badge/MODE-HACKER-ff0080?style=for-the-badge&logo=github&logoColor=white" alt="Hacker Mode"/>
-  <img src="https://img.shields.io/badge/STATUS-ONLINE-00ff41?style=for-the-badge&logo=verify&logoColor=white" alt="Online"/>
-  <img src="https://img.shields.io/badge/LEVEL-LEGEND-bf00ff?style=for-the-badge&logo=star&logoColor=white" alt="Legend Level"/>
-</p>
+<h1 align="center">yashraj-ghemud</h1>
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,50:bf00ff,100:ff0080&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+<p align="center"><strong>Small, workflows-only repository that automates GitHub profile stats updates and generates a "snake" SVG from the GitHub contribution graph.</strong></p>
 
-<!-- 🖥️ TERMINAL SVG -->
-<p align="center">
-  <img src="terminal.svg" width="600" alt="Hacker Terminal"/>
-</p>
+<p align="center"><code>REPO//SIGNAL</code> · <code>BLUEPRINT / SYSTEM</code> · <code>LOOPING README EXPERIENCE</code></p>
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:ff0080,50:bf00ff,100:00f0ff&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+## Live signal
 
-<!-- 👾 ABOUT ME - Animated SVG Card -->
-<p align="center">
-  <img src="aboutme.svg" width="700" alt="About Me Card"/>
-</p>
+| Lens | Readout |
+| --- | --- |
+| Portfolio lane | **BLUEPRINT / SYSTEM** |
+| Code surface | **10** tracked files observed |
+| Primary materials | **YAML, Markdown** |
+| Verification | **0** test-related files observed |
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,50:ff0080,100:bf00ff&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+> A structural view of the project machinery. The animated frame above is a lightweight visual signature; the sections below remain the source of truth for implementation details.
 
-<!-- 📊 GITHUB STATS -->
-## <img src="https://media.giphy.com/media/qgQUggAC3Pfv687qPC/giphy.gif" width="30"> GitHub Combat Stats
+## Motion map
 
-<!--
-  ⚠️ IMPORTANT: If stats cards show broken images, you need to deploy your own instance!
-  Quick Fix: Follow the steps below
--->
+`INGEST` → `COMPOSE` → `SHIP`
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api?username=yashraj-ghemud&show_icons=true&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff&ring_color=00f0ff" width="49%" alt="GitHub Stats"/>
-  <img src="https://github-readme-streak-stats.herokuapp.com?user=yashraj-ghemud&theme=radical&hide_border=true&background=0d1117&ring_color=00f0ff&fire_color=ff0080&currStreakLabel=00f0ff&sideLabels=bf00ff&dates=ffffff" width="49%" alt="GitHub Streak"/>
-</p>
+Trace the repository from inputs and dependencies through its core modules to the delivered surface. Keep configuration explicit, make failure states observable, and add verification around the highest-value paths.
 
-<p align="center">
-  <img src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=yashraj-ghemud&layout=compact&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&text_color=bf00ff" width="49%" alt="Top Languages"/>
-  <img src="https://github-profile-trophy.vercel.app/?username=yashraj-ghemud&theme=onestar&no-frame=true&no-bg=true&column=4&margin-w=10" width="49%" alt="Trophies"/>
-</p>
+<details open>
+<summary><strong>Open the full project dossier</strong></summary>
 
-<!-- 🐍 SNAKE ANIMATION -->
-## <img src="https://media.giphy.com/media/3oKIPnAiaMCws8nOsE/giphy.gif" width="25"> Snake Contribution Graph
+## Overview
+This repository contains GitHub Actions workflows that generate contribution-graph "snake" SVG(s) and periodically update profile statistics. No application source code, tests, or packaging files are present in the provided dossier — the repository is workflow-centric and produces artifacts that are pushed to a separate branch.
 
-<p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/yashraj-ghemud/yashraj-ghemud/output/github-snake-dark.svg" />
-    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/yashraj-ghemud/yashraj-ghemud/output/github-snake.svg" />
-    <img alt="github-snake" src="https://raw.githubusercontent.com/yashraj-ghemud/yashraj-ghemud/output/github-snake-dark.svg" />
-  </picture>
-</p>
+## What it does
+- Runs scheduled and manual GitHub Actions to generate artifacts and, in one workflow, update profile statistics.
+- Generates contribution-graph "snake" SVG(s) (svg-only mode) and writes them to dist/, then pushes dist/ to an output branch.
+- Runs a profile-stats updater on a schedule that can commit README changes back to the repository.
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,50:ff0080,100:bf00ff&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+## Key capabilities
+- Scheduled generation of GitHub contribution "snake" SVG(s) (daily/cron schedules reported).
+- Manual workflow_dispatch triggers for immediate runs.
+- Artifacts are written to dist/ and pushed to an "output" branch.
+- Profile-stats updater scheduled every 6 hours.
+- Uses svg-only generation to avoid canvas/GIF dependencies.
 
-<!-- 🛠️ TECH STACK -->
-## <img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="30"> Tech Arsenal
+## Technology
+- GitHub Actions (YAML workflows)
+- Platane/snk (Platane/snk@v3 / v3 svg-only)
+- crazy-max/ghaction-github-pages (v3/v4)
+- actions/checkout@v4
+- Git/GitHub (GITHUB_TOKEN)
+- YAML
 
-<p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"/>
-  <img src="https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white"/>
-  <img src="https://img.shields.io/badge/C++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white"/>
-</p>
+## Repository structure
+Files and directories observed at the repository root:
+- Readme.md
+- aboutme.svg
+- banner.svg
+- fighting.svg
+- terminal.svg
+- assets/ (directory)
+- snake.yml (root-level file; appears to duplicate content found under .github)
+Workflows:
+- .github/workflows/snake.yml
+- .github/workflows/profile-stats.yml
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vuedotjs&logoColor=4FC08D"/>
-</p>
+Note: the provided dossier contains workflow YAML files and several SVG assets. There is no application code, tests, or other documentation files beyond the listed items.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white"/>
-  <img src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white"/>
-</p>
+## Getting started
+- This repository does not contain an application to install. It is driven by GitHub Actions workflows.
+- To inspect how generation and publishing work, review the workflow YAML files:
+  - .github/workflows/snake.yml
+  - .github/workflows/profile-stats.yml
+  - (Also review the root-level snake.yml file which may be a duplicate.)
+- Generated artifacts are produced into dist/ during workflow runs and are pushed to an output branch (named "output" in the observed workflows).
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Kubernetes-326CE5?style=for-the-badge&logo=kubernetes&logoColor=white"/>
-  <img src="https://img.shields.io/badge/AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=FF9900"/>
-  <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black"/>
-  <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"/>
-  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white"/>
-  <img src="https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white"/>
-</p>
+If you want to evaluate or modify behavior, open the workflow files above to see triggers, scheduled cron expressions, and action usages.
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:bf00ff,50:00f0ff,100:ff0080&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+## Configuration
+- Triggers: scheduled (cron), workflow_dispatch (manual), and some push events (as defined in workflows).
+- Actions used: Platane/snk for SVG generation and crazy-max/ghaction-github-pages to push dist/ to an output branch. actions/checkout@v4 is used to obtain code.
+- Authentication: workflows use the built-in GITHUB_TOKEN to push artifacts.
+- Permissions: some jobs set write permissions for contents to allow pushing; specific step/job-level permissions should be reviewed in the YAML.
 
-<!-- 🎮 ACTIVITY GRAPH -->
-## <img src="https://media.giphy.com/media/13HgwGsXF0aiGY/giphy.gif" width="30"> Activity Graph
+## Development and quality notes
+- This is a small, simple surface area (workflows only), which makes audit and reasoning straightforward.
+- Observed gaps:
+  - No source code, tests, or CI checks beyond the scheduled workflows.
+  - Possible duplicate workflow definitions: a snake workflow file exists both at .github/workflows/snake.yml and at the repository root (snake.yml).
+  - Actions are referenced by tags (v3/v4) but not pinned to commit SHAs.
+  - No concurrency keys observed — runs could overlap.
+  - No explicit artifact validation (e.g., check that generated SVGs are non-empty) before pushing.
+- Suggested non-speculative improvements (based on the observed files):
+  - Consolidate duplicate snake workflow files to a single canonical .github/workflows/snake.yml.
+  - Tighten permissions to the least-privilege required, preferably at job/step level.
+  - Add concurrency: key to scheduled workflows to avoid overlapping runs.
+  - Add artifact validation steps to fail the run if generation did not produce expected files.
 
-<p align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=yashraj-ghemud&bg_color=0d1117&color=00f0ff&line=ff0080&point=bf00ff&area=true&hide_border=true&custom_title=Combat%20Activity%20Tracker" width="100%" alt="Activity Graph"/>
-</p>
+## Safety and responsible use
+- Workflows push generated content back to the repository and to an output branch. Review commit/push steps to ensure they only run when intended.
+- Security observations:
+  - Only GITHUB_TOKEN is used (no additional secrets observed); ensure workflow permissions are scoped appropriately.
+  - Third-party actions are referenced by tag; consider pinning to commit SHAs to reduce supply-chain risk.
+  - Steps that request write access should be constrained to the minimum necessary scope.
+  - There is no observed artifact verification prior to publishing generated files.
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:ff0080,50:00f0ff,100:bf00ff&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+## Contributing
+- There is no CONTRIBUTING file observed in the provided dossier. To contribute:
+  - Review and edit the workflow YAML files (.github/workflows/*.yml and root snake.yml).
+  - Consider proposing changes that address the noted gaps: deduplicate workflows, pin actions to SHAs, tighten permissions, add concurrency control, and add artifact validation.
+  - When proposing commits that push back to the repository, ensure they do not unintentionally trigger other workflows in a loop.
 
-<!-- 🏆 FEATURED PROJECTS -->
-## <img src="https://media.giphy.com/media/3o7btNa0RUYa5E7iiQ/giphy.gif" width="30"> Featured Projects
+## License
+No license file or license metadata was observed in the provided dossier; none is declared here.
 
-<p align="center">
-  <a href="https://github.com/yashraj-ghemud/REPO_1">
-    <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_1&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
-  </a>
-  <a href="https://github.com/yashraj-ghemud/REPO_2">
-    <img align="center" src="https://github-readme-stats-sigma-five.vercel.app/api/pin/?username=yashraj-ghemud&repo=REPO_2&theme=radical&hide_border=true&bg_color=0d1117&title_color=00f0ff&icon_color=ff0080&text_color=bf00ff" />
-  </a>
-</p>
+</details>
 
-<!-- 🎯 SECTION DIVIDER -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0:00f0ff,50:bf00ff,100:ff0080&fontColor=ffffff&height=3&section=header&text=&desc=&fontSize=0"/>
+---
 
-<!-- 🤝 CONNECT -->
-## <img src="https://media.giphy.com/media/LnQjpWaON8nhr21vNW/giphy.gif" width="25"> Connect With Me
-
-<p align="center">
-  <a href="https://github.com/yashraj-ghemud">
-    <img src="https://img.shields.io/badge/GitHub-yashraj-ghemud-00f0ff?style=for-the-badge&logo=github&logoColor=white"/>
-  </a>
-  <a href="https://twitter.com/yashraj-ghemud">
-    <img src="https://img.shields.io/badge/Twitter-@yashraj-ghemud-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white"/>
-  </a>
-  <a href="https://linkedin.com/in/yashraj-ghemud">
-    <img src="https://img.shields.io/badge/LinkedIn-yashraj-ghemud-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
-  </a>
-  <a href="mailto:your.email@gmail.com">
-    <img src="https://img.shields.io/badge/Email-your.email@gmail.com-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
-  </a>
-  <a href="https://discord.gg/YOUR_DISCORD">
-    <img src="https://img.shields.io/badge/Discord-yashraj-ghemud-5865F2?style=for-the-badge&logo=discord&logoColor=white"/>
-  </a>
-</p>
-
-<!-- 🔥 FOOTER ANIMATION -->
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00f0ff,50:bf00ff,100:ff0080&height=120&section=footer&text=See%20You%20In%20The%20Matrix%20%F0%9F%92%80&fontSize=24&fontColor=ffffff&animation=twinkling"/>
+<p align="center"><sub>README motion system · visual layer by RepoSignal · implementation details remain project-specific</sub></p>
